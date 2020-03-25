@@ -1,25 +1,28 @@
 package main
 
 import (
-	"errors"
 	"fmt"
+	"math"
 )
 
 func main() {
-	var a int
-	var b int
-	_, _ = fmt.Scan(&a, &b)
-	var res, err = divide(a, b)
-	if err != nil {
-		fmt.Println()
-	} else {
-		fmt.Println(res)
-	}
+	fmt.Println(T())
 }
 
-func divide(a int, b int) (int, error) {
-	if b == 0 {
-		return 0, errors.New("ошибка")
-	}
-	return a / b, nil
+const (
+	k = 1266
+	p = 6
+	v = 6
+)
+
+func T() float64 {
+	return 6.0 / W()
+}
+
+func W() float64 {
+	return math.Sqrt(k / M())
+}
+
+func M() float64 {
+	return p * v
 }
